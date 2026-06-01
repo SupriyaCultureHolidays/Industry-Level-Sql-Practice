@@ -4,7 +4,7 @@ show tables;
 -- LEVEL 1 — BASIC QUERIES (Q1–Q30)
 -- ===============================
 select * from users;
-select * from products;
+SELECT * FROM reviews;
 -- Q1 List all users who registered in the last 30 days
 
 select now();
@@ -75,31 +75,31 @@ select * from shipments where status="in_transit";
 select * from reviews where status = "pending";
 
 -- Q22 Find all products marked as featured (is_featured = 1)
-
+select * from products where is_featured = 1;
 
 -- Q23 List all orders where payment_status = 'paid'
-
+select * from orders where payment_status = 'paid';
 
 -- Q24 Retrieve all carts marked as abandoned
-
+select * from carts where status = "abandoned";
 
 -- Q25 Show the total number of products in the database
-
+select count(*) from products;
 
 -- Q26 Find all users whose phone number is NULL
-
+select * from users where phone = null;
 
 -- Q27 List all products with quantity_in_stock = 0
-
+select * from products;
 
 -- Q28 Show all orders created in the year 2024
-
+select * from orders where year(created_at)=2024; 
 
 -- Q29 Retrieve all payments made via UPI
-
+select * from payments where payment_method="UPI";
 
 -- Q30 List all products belonging to vendors with vendor_id between 10 and 20
-
+select * from products where vendor_id between 10 and 20;
 
 
 

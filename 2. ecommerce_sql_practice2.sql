@@ -1,27 +1,22 @@
 -- =========================================
 -- LEVEL 2 — FILTERING & AGGREGATION (Q31–Q70)
 -- =========================================
-
+select * from reviews where product_id=601;
 -- Q31 Count total orders per order_status, sorted by count descending
-
-
+select order_status, count(order_status) from orders group by order_status order by order_status desc;
 -- Q32 Find the total revenue from all successfully paid orders
-
-
+select sum(total_amount) as total_revenue from orders where payment_status="paid" group by payment_status;
 -- Q33 Calculate the average product rating per product using the reviews table
-
-
+select product_id, avg(rating) from reviews group by product_id;
+select p.title, product_id, avg(rating), COUNT(*) AS review_count from reviews as r join products as p on p.id = r.product_id group by product_id;
 -- Q34 Show the number of products listed by each vendor, sorted highest first
-
-
+select vendor_id, count(vendor_id) as totalProducts from products group by vendor_id order by totalProducts desc;
 -- Q35 Find total orders placed per month in 2024
-
 
 -- Q36 Calculate total sales amount (SUM of total_price) per product
 
-
 -- Q37 Find the top 5 categories by number of active products
-
+select * from products where status="active" limit 5;
 
 -- Q38 Show the average order value per user (only users with 3+ orders)
 

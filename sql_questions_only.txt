@@ -1,0 +1,200 @@
+-- Q1: List all users who registered in the last 30 days.
+-- Q2: Find all products with a price greater than ₹10,000.
+-- Q3: Retrieve all orders currently in 'delivered' status.
+-- Q4: Show all vendors whose status is 'active'.
+-- Q5: List all product categories along with their parent category name.
+-- Q6: Find all customers (role = 'customer') who have verified their email.
+-- Q7: Retrieve all products that belong to the 'Electronics' category.
+-- Q8: Show all orders placed by a specific user (user_id = 300).
+-- Q9: List all cart items for a specific cart (cart_id = 50).
+-- Q10: Find all reviews with a 5-star rating.
+-- Q11: Retrieve all payments that failed.
+-- Q12: List all shipments handled by courier_partner = 'Delhivery'.
+-- Q13: Find all products whose sale_price is NOT NULL (currently on discount).
+-- Q14: Show all users who have been banned.
+-- Q15: List all orders that used a coupon_code.
+-- Q16: Retrieve the 10 most recently created products.
+-- Q17: Find all vendors located in the city 'Bangalore'.
+-- Q18: Show all order_items for a specific order (order_id = 200).
+-- Q19: List all products in the 'Smartphones' sub-category.
+-- Q20: Retrieve all shipments currently in 'in_transit' status.
+-- Q21: Show all reviews that are pending moderation (status = 'pending').
+-- Q22: Find all products marked as featured (is_featured = 1).
+-- Q23: List all orders where payment_status = 'paid'.
+-- Q24: Retrieve all carts marked as 'abandoned'.
+-- Q25: Show the total count of products in the database.
+-- Q26: Find all users whose phone number is NULL.
+-- Q27: List all products with quantity_in_stock = 0 in the inventory table.
+-- Q28: Show all orders created in the year 2024.
+-- Q29: Retrieve all payments made via the 'upi' payment method.
+-- Q30: List all products belonging to vendors with vendor_id between 10 and 20.
+-- Q31: Count total orders per order_status, sorted by count descending.
+-- Q32: Calculate total revenue from all orders with payment_status = 'paid'.
+-- Q33: Find the average product rating per product (using the reviews table).
+-- Q34: Show the number of products listed by each vendor, sorted highest first.
+-- Q35: Find total orders placed per month in 2024.
+-- Q36: Calculate total sales amount (SUM of total_price) per product from order_items.
+-- Q37: Find the top 5 categories by number of active products.
+-- Q38: Show average order value per user — only users with 3 or more orders.
+-- Q39: Count failed payments per payment_gateway.
+-- Q40: Find all vendors who have listed more than 50 products.
+-- Q41: Calculate the total refund_amount issued across all payments.
+-- Q42: Show the number of reviews per rating value (1 through 5).
+-- Q43: Find the total shipping_cost per courier_partner.
+-- Q44: List products where discount percentage exceeds 30%.
+-- Q45: Count abandoned carts per user — show only users with 2 or more abandoned carts.
+-- Q46: Calculate total revenue per vendor for delivered orders only.
+-- Q47: Find the month with the highest number of new user registrations.
+-- Q48: Show products that have been reviewed more than 10 times.
+-- Q49: Calculate the payment success rate (success / total) per payment_method.
+-- Q50: Find the average delivery time in days for all delivered orders.
+-- Q51: Show the number of orders placed per day of the week (Mon–Sun).
+-- Q52: Find the top 10 products by total quantity sold.
+-- Q53: Calculate cart abandonment rate: abandoned carts ÷ total carts × 100.
+-- Q54: Show total revenue and order count grouped by order_status.
+-- Q55: Find vendors whose average product price exceeds ₹5,000.
+-- Q56: Count total products per category including sub-categories.
+-- Q57: Show number of shipments per shipping_method.
+-- Q58: Find all orders where discount_amount > 500 and payment_status = 'paid'.
+-- Q59: Calculate the average vendor rating from reviews (joined through products).
+-- Q60: Show total and average order value per quarter for the past year.
+-- Q61: Find products per vendor that are currently out of stock (quantity_in_stock = 0).
+-- Q62: List payment failure reasons with their frequency count.
+-- Q63: Show the percentage of orders that used a coupon_code.
+-- Q64: Find users who have placed orders but never written a review.
+-- Q65: Calculate total tax collected per month.
+-- Q66: Show the top 5 vendor cities by total revenue.
+-- Q67: Find the average number of items per order.
+-- Q68: Count orders by both order_status and payment_status as a cross-tab matrix.
+-- Q69: Show vendors ranked by commission_rate, highest first.
+-- Q70: Calculate total inventory value (quantity_in_stock × price) per category.
+-- Q71: Join users, vendors, and products — show vendor name, store name, and product count.
+-- Q72: Get all orders with customer name, email, order_number, and total_amount.
+-- Q73: List all order_items with product title, vendor store name, quantity, and unit_price.
+-- Q74: Show all reviews with reviewer name, product title, rating, and review body.
+-- Q75: Join orders, payments, and users — show order with payment method and status.
+-- Q76: Retrieve all shipments with order_number, customer name, courier, and current status.
+-- Q77: Show abandoned carts with customer name, total_amount, and product titles in the cart.
+-- Q78: List products with category name, sub-category name, vendor name, and current stock level.
+-- Q79: Join order_items and products to find revenue per product with vendor info.
+-- Q80: Show each vendor's total orders, total revenue, and average order value.
+-- Q81: Get all users who have never placed an order (LEFT JOIN with NULL check).
+-- Q82: List all products that are in active carts but have never been ordered.
+-- Q83: Show all orders with their shipment tracking number and estimated delivery date.
+-- Q84: Find customers who placed orders but have not yet received them.
+-- Q85: Join products and product_inventory to list items below reorder_level.
+-- Q86: Show all reviews that have vendor replies, including product and vendor name.
+-- Q87: List all orders that contain products from more than one vendor.
+-- Q88: Find products where the vendor is suspended but the product is still active.
+-- Q89: Show product title, vendor name, category, and total revenue for featured products only.
+-- Q90: Get the full order lifecycle in one query: order → payment → shipment.
+-- Q91: Show each category with count of active products and average price.
+-- Q92: List users who have purchased from at least 3 different product categories.
+-- Q93: Show the vendor with the highest-rated products (avg rating + product count).
+-- Q94: Join carts and cart_items to find total active cart value per user.
+-- Q95: Show multi-item orders with item breakdown, vendor names, and per-item totals.
+-- Q96: Verify that all reviews belong to actually purchased products (reviews → order_items).
+-- Q97: Show order totals alongside payment amounts to detect discrepancies.
+-- Q98: List all vendors with their approved_at date and orders received since then.
+-- Q99: Get users with role name, total orders, total spent, and account status.
+-- Q100: Find categories that have no products currently listed.
+-- Q101: Show all products with inventory status: in-stock / low-stock / out-of-stock.
+-- Q102: List shipments that were delivered earlier than estimated_delivery_date.
+-- Q103: Show customers who ordered, reviewed, and also have an active cart.
+-- Q104: Find orders that are paid but not yet shipped.
+-- Q105: Retrieve all vendors and the date of their most recent sale.
+-- Q106: Show order_items with return_status NOT NULL, with customer name and reason.
+-- Q107: Find the most popular product in each category by total units sold.
+-- Q108: List all payments with refund_amount > 0, with order and user details.
+-- Q109: Join users, carts, and cart_items to find average cart value per role.
+-- Q110: Show all products sold by inactive or suspended vendors.
+-- Q111: Calculate monthly revenue for the past 12 months with month-over-month growth %.
+-- Q112: Build a vendor performance report: revenue, order count, avg rating, return rate, speed.
+-- Q113: Rank products within each category by units sold — show top 3 per category.
+-- Q114: Calculate total lost revenue from items sitting in abandoned carts.
+-- Q115: Calculate refund rate per vendor and flag those above 10%.
+-- Q116: Identify top-selling categories by revenue and their % of platform total.
+-- Q117: Find returning customers: 2+ orders, retention period, and total lifetime spend.
+-- Q118: Detect inventory alerts: products at or below reorder_level with days-to-stockout.
+-- Q119: Track average time between each order status transition.
+-- Q120: Calculate payment failure rate per gateway per month.
+-- Q121: Identify delayed shipments: dispatched 7+ days ago and still not delivered.
+-- Q122: Fraud detection: users with 3+ failed payments in the last 7 days.
+-- Q123: Calculate customer lifetime value: total spend with tenure in months.
+-- Q124: Compute a rating quality score per product: % 5-star minus % 1-2 star reviews.
+-- Q125: Monthly cohort: for each registration month, how many users ordered within 30 days.
+-- Q126: Find products with high review volume but low rating (>20 reviews, avg < 3.0).
+-- Q127: Calculate average time between user registration and their very first order.
+-- Q128: Identify peak shopping hours: count orders per hour of day.
+-- Q129: Show the top 10 customers by GMV in the last 90 days.
+-- Q130: Calculate vendor commission earned per month (revenue × rate ÷ 100).
+-- Q131: Show cart-to-order conversion rate by month.
+-- Q132: Identify products that were sold but are now inactive or deleted.
+-- Q133: Find customers who ordered, then went inactive for 90+ days.
+-- Q134: Show seasonal trends: compare Q1 vs Q2 vs Q3 vs Q4 revenue.
+-- Q135: Calculate ROI per category: total revenue vs total cost_price of sold items.
+-- Q136: Segment users into Bronze / Silver / Gold tiers by total spend.
+-- Q137: Show daily unique buyers (distinct users who placed an order) for the last 30 days.
+-- Q138: Compute first-order vs repeat-order revenue split.
+-- Q139: Find products with zero sales in 60 days but still active and in stock.
+-- Q140: Show vendor growth: this month's revenue vs same month last year.
+-- Q141: Use ROW_NUMBER() to find the single most recent order per user.
+-- Q142: Use RANK() to rank products by revenue within each category, showing all ties.
+-- Q143: Use LAG() to compare each month's revenue to the previous month.
+-- Q144: Use LEAD() to show each order and the same user's next order timestamp.
+-- Q145: Write a CTE to find users who placed orders in both Q1 and Q4 of the same year.
+-- Q146: Use a recursive CTE to traverse the full category hierarchy.
+-- Q147: Write a correlated subquery to rank each product within its vendor's catalog by revenue.
+-- Q148: Use DENSE_RANK() to identify the top-3 vendors by monthly revenue for the last 6 months.
+-- Q149: Use conditional aggregation to pivot payment statuses into columns per month.
+-- Q150: Write a CTE chain to calculate the 7-day rolling average revenue per vendor.
+-- Q151: Use NTILE(4) to segment customers into revenue quartiles.
+-- Q152: Write a query using EXISTS to find products in both an active cart and a pending order.
+-- Q153: Use window SUM to calculate running total of revenue per vendor month-by-month.
+-- Q154: Use FIRST_VALUE() to show the first product ever listed in each category.
+-- Q155: Write a correlated subquery to check each order's total matches its order_items sum.
+-- Q156: Use PERCENT_RANK() to show where each product falls in the overall price distribution.
+-- Q157: Write a CTE + window function for 3-month moving average of orders per category.
+-- Q158: Flag users as 'at risk' using CASE WHEN if their last order was 60+ days ago.
+-- Q159: Write a pivot-style query showing product revenue by month (Jan–Dec) as separate columns.
+-- Q160: Use a self-join on orders to find orders from the same user placed within 5 minutes.
+-- Q161: Write multiple CTEs to build a funnel: carts → orders → paid payments.
+-- Q162: Use window SUM to calculate each order's % contribution to user's total lifetime spend.
+-- Q163: Write a NOT EXISTS subquery to find vendors with no orders in the last 30 days.
+-- Q164: Use ROW_NUMBER with PARTITION BY to keep only one review per user per product.
+-- Q165: Detect duplicate payments: same order_id, same amount, within 10 minutes.
+-- Q166: Use CUME_DIST() to find the top 20% of customers by total spend.
+-- Q167: Write a CTE to calculate monthly churn: ordered last month but not this month.
+-- Q168: Use a derived table in FROM to pre-aggregate order_items before joining to orders.
+-- Q169: Use a derived table to get the top 2 products sold per vendor.
+-- Q170: Use conditional aggregation to show order counts by status per vendor in one row.
+-- Q171: Build a full cohort retention table: for each monthly cohort show retention % for months 1–6.
+-- Q172: Detect payment fraud: orders with 2+ payment attempts using different methods within 1 hour.
+-- Q173: Reconcile order totals: find orders where total ≠ subtotal + shipping − discount + tax.
+-- Q174: Build a real-time inventory dashboard: stock, reserved, available, days-to-stockout per product.
+-- Q175: Build a vendor payout report: gross sales, platform commission, net payout per vendor/month.
+-- Q176: Detect fake review patterns: users who submitted 5+ reviews in a single day.
+-- Q177: Build an order funnel: cart created → order placed → payment success → shipment dispatched.
+-- Q178: Calculate LTV prediction: average monthly spend × estimated remaining customer lifetime.
+-- Q179: Identify flash sale abuse: same product bought 3+ times in 24 hours by the same user.
+-- Q180: Build a product co-purchase query: top 5 product pairs ordered together most often.
+-- Q181: Write a multi-CTE vendor health score using revenue trend, return rate, rating, speed.
+-- Q182: Build an RFM segmentation query: score all customers on Recency, Frequency, Monetary.
+-- Q183: Combine RFM scores into named tiers: Champions, Loyal, At Risk, Lost.
+-- Q184: Find products with demand surge: 3× more orders than their 30-day average in last 7 days.
+-- Q185: Build a dynamic pricing signal: products in top 10% demand but fewer than 20 units in stock.
+-- Q186: Audit price integrity: order_items where unit_price differs from current price by > 20%.
+-- Q187: Build an SLA breach report: confirmed 2+ days ago, shipment still in 'pending'.
+-- Q188: Build a chargeback risk model: refund_amount > 50% of total spend in last 90 days.
+-- Q189: Detect inventory shrinkage: total sold + current stock vs total restocked.
+-- Q190: Build a demand forecast baseline: 12-month sales history → projected next month demand.
+-- Q191: Detect account sharing: different shipping addresses from same user in the same hour.
+-- Q192: Use JSON_EXTRACT to analyze payment gateway_response error codes.
+-- Q193: Build a supplier scorecard: on-time delivery %, returned shipments %, order volume.
+-- Q194: Write an alert query: vendor has not updated shipment status in 48 hours post-confirmation.
+-- Q195: Build smart reorder suggestions: (30-day velocity × 14) > current stock.
+-- Q196: Write a weekly active user (WAU) trend query for the past 12 weeks.
+-- Q197: Identify revenue leakage: delivered orders with no matching payment record.
+-- Q198: Build a new vs returning customer revenue split per month.
+-- Q199: Rank vendors by composite score: (revenue×0.4)+(rating×0.3)+(fulfillment_speed×0.3).
+-- Q200: Build the platform health-check CTE: GMV, AOV, take rate, refund rate,
